@@ -1,0 +1,86 @@
+/*-------- FULL MEDIUM --------*/
+
+@media(min-width:1200px){
+	
+	.full-web-view .medium-survey-element .field-main-label{
+		font-size: 18px !important;
+	}
+	.full-web-view .medium-survey-element .field-main-label.heading {
+		font-size: 20px !important;
+	}
+}
+
+@media(max-width:1199px) and (min-width:992px){
+
+	.full-web-view .medium-survey-element .field-main-label{
+		font-size: 18px !important;
+	}
+	.full-web-view .medium-survey-element .field-main-label.heading {
+		font-size: 20px !important;
+	}
+	/*.table-radio-rating, .table-simple-symbol {
+		margin: 0 auto;
+		width: 80%;
+	}*/
+}
+
+@media(max-width:991px) and (min-width:768px){
+	
+	.full-web-view .medium-survey-element .field-main-label{
+		font-size:18px !important;
+	}
+	.full-web-view .medium-survey-element .field-main-label.heading{
+		font-size: 20px !important;
+	}
+	/*.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 16px;
+	}
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.mobile-show-option{
+		font-size: 14px;
+	}	*/
+}
+
+@media(max-width:767px){
+	
+	.full-web-view .medium-survey-element .field-main-label{
+		font-size: 18px !important;
+	}
+	.full-web-view .medium-survey-element .field-main-label.heading{
+		font-size: 20px !important;
+	}
+	/*.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 20px;
+	}
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.mobile-show-option{
+		font-size: 16px;
+	}*/
+	/*.full-web-view .medium-survey-element .form-radio > input + .un-check ,
+	.full-web-view .medium-survey-element .form-checkbox > input + .un-check{
+		background-size: 20px auto;
+		display: inline-block;
+		height: 17px;
+		width: 17px;
+	}*/
+	
+	.without-option-master-text.table-simple-symbol td:first-child {
+		display: inline-block;
+		float: none;
+		width: 100%;
+	}
+	.table-rating-scale td {
+		width: 100%;
+	}
+	.no-text-top td {
+		width: auto;
+	}
+	
+}
+

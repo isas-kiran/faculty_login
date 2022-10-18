@@ -1,0 +1,6 @@
+/*Source sans pro css*/
+#ui-datepicker-div ,
+.ui-datepicker-title .ui-datepicker-month ,
+.ui-datepicker-title .ui-datepicker-year{
+    font-family: "Source Sans Pro";
+}

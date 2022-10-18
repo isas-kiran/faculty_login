@@ -1,0 +1,1118 @@
+<?php include 'inc_classes.php';?>
+<?php include "admin_authentication.php";?>
+<?php include "../classes/thumbnail_images.class.php";
+include "include/ps_pagination.php"; 
+$db= new Database(); $db->connect();
+if(isset($_GET['record_id']))
+$record_id = $_GET['record_id'];
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>
+<?php if($record_id) echo "Edit"; else echo "Enrollment ";?>
+ Form</title>
+<?php include "include/headHeader.php";?>
+<?php include "include/functions.php"; ?>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+<!--    <script type='text/javascript' src='js/jquery-1.6.2.min.js'></script>-->
+    <script src="js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Multiselect -->
+    <link rel="stylesheet" type="text/css" href="multifilter/jquery.multiselect.css" />
+    <link rel="stylesheet" type="text/css" href="multifilter/jquery.multiselect.filter.css" />
+    <link rel="stylesheet" type="text/css" href="multifilter/assets/prettify.css" />
+    <script type="text/javascript" src="multifilter/src/jquery.multiselect.js"></script>
+    <script type="text/javascript" src="multifilter/src/jquery.multiselect.filter.js"></script>
+    <script type="text/javascript" src="multifilter/assets/prettify.js"></script>
+    <!--        <script src="../js/jquery.custom/development-bundle/jquery-1.4.2.js"></script>-->
+    <link rel="stylesheet" href="js/development-bundle/demos/demos.css"/>
+    <script src="js/development-bundle/ui/jquery.ui.core.js"></script>
+    <script src="js/development-bundle/ui/jquery.ui.widget.js"></script>
+    <script src="js/development-bundle/ui/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript">
+           
+    $(document).ready(function()
+    {            
+        $('.datepicker').datepicker({ changeMonth: true,changeYear: true, showButtonPanel: true, closeText: 'Clear',minDate: '-50Y',
+        maxDate: '+2Y',});
+    });
+    </script>
+    <script type="text/javascript">
+	function submitform()
+	{
+		return calculate_total($("#amount_paid").val(),1);
+	}
+	finish = 0;
+	remain=0;
+	function calculate_total(amount_paid,final_call)
+	{
+		if(amount_paid == "")
+			amount_paid = 0;
+		
+		var no_of_installment = $("#no_of_installment").val();
+		var no_of_paid_installment = parseInt($("#no_of_paid_installment").val());
+		if(no_of_paid_installment && no_of_paid_installment!=undefined)
+			var start_with = no_of_paid_installment+1;
+		else
+			var start_with = 1;
+		//alert(start_with);
+		//----first reset all the values to default--
+		for(c=start_with;c<=no_of_installment;c++)
+		{
+			$("#int_id_"+c).html(parseInt($("#inst_"+c).val()));
+		}
+		//-------------------------------------------
+		
+		var balance_amount = $("#balance_amount").val();
+		var amount_to_be_paid = parseInt(amount_paid);
+		var total_remaining = parseInt(balance_amount);// - parseInt(amount_to_be_paid);
+		if(total_remaining-parseInt(amount_to_be_paid)<0)
+		{
+			alert("Invalid input.");
+			return false;
+		}
+		//alert(start_with+'-'+no_of_installment);
+		$("#bal_amt").val(total_remaining);
+		for(x=start_with;x<=no_of_installment;x++)
+		{
+			//alert(total_remaining);
+			var inst_id_val = parseInt($("#inst_"+x).val());
+			if(total_remaining<0)
+			{
+				alert("Amount should be less than or equal to the remaining amount.");
+				break;
+			}
+			else
+			{
+				var current_inst_bal = inst_id_val-amount_to_be_paid;
+				//alert(inst_id_val+'='+current_inst_bal);
+				if(current_inst_bal<0)
+				{
+					amount_to_be_paid = -1*current_inst_bal;
+					total_remaining = total_remaining-inst_id_val;
+					if(final_call == 1)
+					{
+						//alert($("#inst_original_"+start_with).val()+'<11>'+amount_paid);
+						if(parseInt($("#inst_original_"+start_with).val())<amount_paid)
+							$("#inst_"+x).val(0);
+					}
+					$("#int_id_"+x).html(0);
+					continue;
+				}
+				else
+				{
+					//alert(current_inst_bal);
+					if(current_inst_bal==0)
+						total_remaining = total_remaining-inst_id_val;
+					else
+						total_remaining = total_remaining-amount_to_be_paid;
+					if(final_call == 1)
+					{
+						//alert($("#inst_original_"+start_with).val()+'<122>'+amount_paid);
+						if(parseInt($("#inst_original_"+start_with).val())<amount_paid)
+						{
+							
+							/*amount_to_be_paid = -1*current_inst_bal;
+							inst_paid=amount_to_be_paid/no_of_installment;
+							extra_added=parseInt(inst_id_val+inst_paid);
+							alert(extra_added);
+							for(v=2;v<=no_of_installment;v++)
+							{
+								$("#int_id_"+v).html(extra_added);
+							}
+							total_remaining = total_remaining-inst_id_val;
+							if(final_call == 1)
+							{
+								//alert($("#inst_original_"+start_with).val()+'<11>'+amount_paid);
+								if(parseInt($("#inst_original_"+start_with).val())>amount_paid)
+									$("#inst_"+x).val(0);
+							}
+							$("#int_id_"+x).html(0);
+							continue;
+							*/
+						    alert("Deposit amount should not be less than current installment.");
+							return false;
+						}
+						else
+						{
+							alert($("#inst_"+x).val(current_inst_bal));
+						}
+					}
+					/*else
+					{
+						//alert($("#inst_original_"+start_with).val()));
+						if(parseInt($("#inst_original_"+start_with).val())>amount_paid)
+						{
+							
+							alert($("#inst_"+x).val(current_inst_bal));
+							amount_to_be_paid = -1*current_inst_bal;
+							inst_paid=amount_to_be_paid/no_of_installment;
+							extra_added=parseInt(inst_id_val+inst_paid);
+							alert(extra_added);
+							for(v=2;v<=no_of_installment;v++)
+							{
+								$("#int_id_"+v).html(extra_added);
+							}
+							total_remaining = total_remaining-inst_id_val;
+							
+						}
+						else
+						{
+							//alert($("#inst_"+x).val(current_inst_bal));
+						}
+					}*/
+					$("#int_id_"+x).html(current_inst_bal);
+					break;
+				}
+			}
+		}
+		if(final_call == 1)
+			$('#avail_balance').val(total_remaining);	
+			
+		$('#avail_balance_show').html(total_remaining);
+		return true;
+	}
+	function calculate_total_old(amount_paid)   // caloculate the total of sell
+  	{
+		var balance_amount= document.getElementById('balance_amount').value;
+		//alert(balance_amount);
+	    amount_paid_id=parseInt(amount_paid); 
+		//alert(amount_paid_id);
+		//amount_paid_id= document.getElementById(amount_paid_id).value;
+		avail_balance_id = parseInt(balance_amount) - parseInt(amount_paid_id);
+		//alert(avail_balance_id);	
+		document.getElementById('bal_amt').value=avail_balance_id;
+		no_of_installment = $("#no_of_installment").val();	
+		//alert(no_of_installment);
+		var remaining =	parseInt(balance_amount);
+		
+		for(x=1;x<=no_of_installment;x++)
+		{ 
+		  //  alert(finish);
+			if(finish!=x)
+			{
+			inst_id_val = $("#inst_"+x).val();					
+			//alert(inst_id_val);
+			vlsd = inst_id_val-amount_paid_id;
+			//alert(amount_paid_id);
+			if(vlsd<0)
+			{
+				remain= vlsd;
+				$("#int_id_"+x).html(0);
+				//$("#inst_"+(x+1)).val($("#inst_"+x).val()+remain);
+				nx =(parseInt($("#inst_"+x).val())+remain);
+				$("#inst_"+(x+1)).val(nx);
+				$("#inst_"+x).val(vlsd)
+				if(nx<0 && $("#inst_"+(x+1)))
+				{
+					$("#inst_"+(x+1)).val(0);
+					//alert(nx);
+					//alert($("#inst_"+(x+1)).val());
+					$("#int_id_"+(x+1)).html(0);
+					if($("#inst_"+(x+2)))
+					{
+						nx2 = (parseInt($("#inst_"+(x+2)).val())+nx);
+						$("#int_id_"+(x+2)).html(nx2);
+					}
+				}
+				else
+				{
+					$("#int_id_"+(x+1)).html(nx);
+				}
+				
+				//alert(nx);
+				
+				finish=x;
+				break;
+					
+			}else
+			if(amount_paid_id <= parseInt(inst_id_val))
+			{ 
+			   
+				if($("#int_id_"+x).html() !=0)
+				{	
+				 	
+					$("#int_id_"+x).html(vlsd);
+					if($("#int_id_"+x).html()==0)
+					finish=x;
+					break;
+				}
+				
+				
+				
+			}
+			
+			//alert(finish);
+			}
+		}
+		//alert($("#inst_1").val());
+		document.getElementById('avail_balance').value=avail_balance_id;		
+		document.getElementById('avail_balance_show').innerHTML = avail_balance_id;
+    }
+	
+	
+</script>
+
+ <style type = "text/css">
+        #feedback{
+            line-height:;
+        }
+		.obrderclass{ border:1px solid #f00}
+    </style>  
+    
+    <script type="text/javascript">
+        function show() { document.getElementById('payment').style.display = 'block'; $('#pay_type').removeClass("obrderclass");  }
+        function hide() { document.getElementById('payment').style.display = 'none'; $('#pay_type').removeClass("obrderclass");  }
+      </script> 
+      
+<script>
+function validme()
+{
+	frm = document.frmTakeAction;
+	error='';
+	disp_error = 'Clear The Following Errors : \n\n';
+ 
+if($('#payment_type').val() =="select")
+{
+	disp_error +='Payment mode not selected \n'; 
+	$('#payment_type').addClass("obrderclass"); 
+	error='yes';
+}
+else
+{
+	pay_value=$('#payment_type').val();
+	pay_type=pay_value.split('-');
+	payment_types=pay_type[0];
+	
+	$('#payment_type').removeClass("obrderclass"); 
+	/*var selected = $("input[name=payment_type]:checked");
+		if (selected.length > 0) {
+			selectedVal = selected.val();*/
+	if(payment_types =='cheque')
+	{
+		if(frm.cust_bank_name.value=='')
+		{
+			disp_error +='Select Customer  bank name \n';
+			 error='yes';
+			 document.getElementById('cust_bank_name').style.border = '1px solid #f00';
+			 frm.cust_bank_name.focus();
+		}
+		if(frm.bank_name.value=='select')
+		{
+			disp_error +='Select ISAS bank name \n';
+			 error='yes';
+			 document.getElementById('bank_name').style.border = '1px solid #f00';
+			 frm.bank_name.focus();
+		}
+		if(frm.account_no.value=='')
+		{
+			disp_error +='Enter Account Number of ISAS bank \n';
+			 error='yes';
+			 document.getElementById('account_no').style.border = '1px solid #f00';
+			 frm.account_no.focus();
+		}
+		if(frm.chaque_no.value=='')
+		{
+			disp_error +='Cheque Number is blank \n';
+			 error='yes';
+			  document.getElementById('chaque_no').style.border = '1px solid #f00';
+			 frm.chaque_no.focus();
+		}
+		if(frm.chaque_date.value=='')
+		{
+			disp_error +='Cheque date is blank \n';
+			 error='yes';
+			 $('#chaque_date').addClass("obrderclass"); 
+			 frm.chaque_date.focus();
+		}
+	}
+	else if(payment_types =='Credit Card')
+	{
+		if(frm.cust_bank_name.value=='')
+		{
+			disp_error +='Select Customer  bank name \n';
+			 error='yes';
+			 document.getElementById('cust_bank_name').style.border = '1px solid #f00';
+			 frm.cust_bank_name.focus();
+		}
+		if(frm.bank_name.value=='select')
+		{
+			disp_error +='Select ISAS bank name \n';
+			 error='yes';
+			 document.getElementById('bank_name').style.border = '1px solid #f00';
+			 frm.bank_name.focus();
+		}
+		if(frm.account_no.value=='')
+		{
+			disp_error +='Enter Account Number of ISAS bank \n';
+			 error='yes';
+			 document.getElementById('account_no').style.border = '1px solid #f00';
+			 frm.account_no.focus();
+		}
+		if(frm.credit_card_no.value=='')
+		{
+			disp_error +='Enter Credit Card Number \n';
+			 error='yes';
+			 document.getElementById('credit_card_no').style.border = '1px solid #f00';
+			 frm.credit_card_no.focus();
+		}
+	}
+}
+// alert(error);
+if(error=='yes')
+{
+	alert(disp_error);
+	calculate_total($("#amount_paid").val(),1);
+	return false;
+}
+ else
+ return true;
+}
+
+	 
+	 
+function show_payment(value) 
+{
+	payment_mode=value.split("-")
+	//alert(payment_mode[0]);
+	var branch_name=document.getElementById("branch_name").value;
+	if(payment_mode[0]=="cheque")
+	{
+		document.getElementById("chaque_details").style.display = 'block';
+		document.getElementById("bank_details").style.display = 'block';
+		document.getElementById("credit_details").style.display = 'none';
+		
+		show_bank(branch_name,"cheque")
+	}
+	else if(payment_mode[0]=="Credit Card")
+	{
+		document.getElementById("chaque_details").style.display = 'none';
+		document.getElementById("bank_details").style.display = 'block';
+		document.getElementById("credit_details").style.display = 'block';
+		show_bank(branch_name,"credit_card")
+		
+	}
+	else if(payment_mode[0]=="paytm")
+	{
+		document.getElementById("chaque_details").style.display = 'none';
+		document.getElementById("bank_details").style.display = 'block';
+		document.getElementById("credit_details").style.display = 'none';
+		show_bank(branch_name,"paytm")
+	}
+	else
+	{
+		document.getElementById("chaque_details").style.display = 'none';
+		document.getElementById("bank_details").style.display = 'none';
+		document.getElementById("credit_details").style.display = 'none';
+		show_bank(branch_name,"")
+		
+		
+	}
+}
+		
+		
+function show_acc_no(bank_id)
+{
+	//alert(bank_id);
+	var data1="action=show_account&bank_id="+bank_id;
+	//alert(data1);
+	$.ajax({
+	url: "ajax.php", type: "post", data: data1, cache: false,
+	success: function (html)
+	{
+		document.getElementById('account_no').value=html;
+	}
+	});
+}
+function show_bank(branch_id,vals)
+{
+	record_id= document.getElementById("record_id").value;
+	var bank_data="action=enroll&show_bnk=1&branch_id="+branch_id+"&payment_type="+vals+"&record_id="+record_id;
+	//alert(bank_data);
+	$.ajax({
+	url: "show_bank.php",type:"post", data: bank_data,cache: false,
+	success: function(retbank)
+	{
+		document.getElementById("bank_id").innerHTML=retbank;
+		if(document.getElementById("bank_name").value)
+		{
+			//alert(document.getElementById("bank_name").value);
+			var bank_ids=document.getElementById("bank_name").value;
+			show_acc_no(bank_ids)
+		}
+	}
+
+	});
+}
+</script>
+      
+</head>
+<body>
+<?php include "include/header.php";?>
+
+<div id="info"> 
+
+<?php include "include/menuLeft.php"; ?>
+<!--left end-->
+<!--right start-->
+<div id="right_info">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="top_left"></td>
+    <td class="top_mid" valign="bottom"><?php include "include/student_menu.php"; ?></td>
+    <td class="top_right"></td>
+  </tr>
+  <tr>
+    <td class="mid_left"></td>
+    <td class="mid_mid">
+    					<?php
+    						if($_POST['save_changes'])
+                        	{
+                            	$amount_paid=$_POST['amount_paid'];
+								$balance_amount=$_POST['bal_amt'];
+							 	$enroll_id=$_GET['record_id'];
+								$course_id=$_POST['course_id'];
+								$total_paid=$_POST['amount_paid']+$_POST['paid_amt'];
+								$cm_id=$_POST['cm_id'];
+                             	$cm_id_branch=$_POST['cm_id_branch'];
+								$data_record['course_id'] =$course_id;
+								$data_record['enroll_id'] =$enroll_id;
+								$data_record['paid'] =$total_paid;
+								$data_record['balance_amt'] = $_POST['avail_balance'];
+								$data_record['admin_id']=$_SESSION['admin_id'];
+								$credit_card_no=$_POST['credit_card_no'];
+								$cust_bank_name=$_POST['cust_bank_name'];
+								$payment_mode=$_POST['payment_type'];
+								$sep=explode("-",$payment_mode);
+								$payment_type=$sep[1];
+								$payment_type_val=$sep[0];
+								$bank_name= $_POST['bank_name'];
+								$sel_branch_name="select branch_name from site_setting where cm_id=$cm_id_branch";
+								$ptr_branch=mysql_query($sel_branch_name);
+								$data_branch=mysql_fetch_array($ptr_branch);
+								$branch_name=$data_branch['branch_name'];
+								
+								if($_SESSION['type']=='S')
+								{
+									$data_record['cm_id']=$cm_id_branch;
+									$branch_name1=$branch_name;
+									$cm_id1=$cm_id;
+								}	
+								else
+								{
+									$data_record['cm_id']=$_SESSION['cm_id'];
+									$branch_name1=$_SESSION['branch_name'];
+									$cm_id1=$_SESSION['cm_id'];
+								}
+								
+								$data_record_update['paid'] =$total_paid;
+								$data_record_update['balance_amt'] = $_POST['avail_balance'];
+								$data_record['no_of_installment']=$_POST['no_of_installment'];
+								if($record_id)
+								{
+									$where_record="enroll_id=".$enroll_id;
+									$data_record_update['added_date'] =date('Y-m-d H:i:s');
+									$db->query_update("enrollment",$data_record_update,$where_record);
+									
+									if($payment_type_val=="online")
+									$status='pending';
+									else
+									$status='paid';
+									
+									$insert_new_invoice = " INSERT INTO `invoice` (`enroll_id`, `course_id`, `amount`,`balance_amt`, `paid_type`, `cust_bank_name`,`bank_name`, `cheque_detail`, `chaque_date`, `credit_card_no`,`online_transc_details`, `admin_id`, `added_date`,`status`,`cm_id`) VALUES ('$enroll_id', '$course_id', '$amount_paid','".$data_record['balance_amt']."', '".$payment_type."','".$cust_bank_name."', '".$_POST['bank_name']."', '".$_POST['chaque_no']."', '".$_POST['chaque_date']."','".$bank_name."', '".$_POST['online_transc_details']."', '".$_SESSION['admin_id']."', '".date('Y-m-d H:i:s')."','$status','".$cm_id1."'); ";
+									$ptr_installments_invoice = mysql_query($insert_new_invoice);									
+									$invoice_id = mysql_insert_id();
+									
+									if($data_record['no_of_installment'] !=0)
+									{
+										"<br/>".$delete_install = " delete from installment where  enroll_id=$record_id  and status='not paid'";
+										$ptr_del = mysql_query($delete_install);
+								 		for($i=1;$i<=$data_record['no_of_installment'];$i++)
+								 		{
+											 "<br/>".$_POST['inst_'.$i];
+											if($_POST['inst_'.$i] !='' && $_POST['inst_'.$i] >0)
+											{			
+									  			"<br/>".$insert_query1 = "insert into installment_history(enroll_id, course_id, installment_amount, installment_date, status, invoice_id) values('$enroll_id','".$data_record['course_id']."','".$_POST['inst_'.$i]."','".$_POST['inst_date'.$i]."','not paid', '$invoice_id') ";
+									   
+									   			$insert_ptr1 = mysql_query($insert_query1);
+									    		"<br/>".$insert_query2 = "  insert into installment(enroll_id, course_id, installment_amount, installment_date, status, invoice_id) values('$enroll_id','".$data_record['course_id']."','".$_POST['inst_'.$i]."','".$_POST['inst_date'.$i]."','not paid','$invoice_id') ";
+									   
+									   			$insert_ptr2 = mysql_query($insert_query2);
+										}
+								 	}
+								}
+								//=====================================================================================================
+								$sql_records11= "SELECT invoice_id,enroll_id FROM invoice 
+								where enroll_id=".$record_id." order by invoice_id desc limit 0,1 ";
+								$all_records11 = mysql_query($sql_records11);
+								$data_select111 = mysql_fetch_array($all_records11);
+								
+								$select_firstname1 = " select name,address,contact,mail from enrollment where enroll_id='".$data_select111['enroll_id']."' ";
+								$ptr_query1=mysql_query($select_firstname1);
+								$data_select1 = mysql_fetch_array($ptr_query1);
+								//========================================================================================================
+								//============================================================SEND MESSAGE================================
+								$select_mobno = " select contact_phone from site_setting where (cm_id='".$_SESSION['cm_id']."' or admin_id='".$_SESSION['admin_id']."' or branch_name='".$branch_name1."') and (type='A' or type='C' ) and contact_phone !='' ";
+								$ptr_mob = mysql_query($select_mobno);
+								while($data_mob = mysql_fetch_array($ptr_mob))
+								{
+									//================for Faculty==============
+									$insert_sms="insert into sms_log_history (`sent_name`,`sent_mobile`,`sent_desc`,`user_type`,`sms_type`,`cm_id`,`added_date`) values('".$data_mob['name']."','".$data_mob['contact_phone']."','".$desc."','".$data_mob['designation']."','enqiry','".$cm_id."','".date('Y-m-d H:i:s')."')";
+									$ptr_sms=mysql_query($insert_sms);
+									//send_sms($mobile_numbers,$message);
+									//=========================================
+								}
+								//=================For Student=============
+								$insert_sms="insert into sms_log_history (`sent_name`,`sent_mobile`,`sent_desc`,`user_type`,`sms_type`,`cm_id`,`added_date`) values('".$firstname.' '.$lastname."','".$data_select1['contact']."','".$desc1."','Student','enqiry','".$cm_id."','".date('Y-m-d H:i:s')."')";
+								$ptr_sms=mysql_query($insert_sms);
+								//send_sms($mobile_numbers,$message);
+								//==========================================
+								?>
+                                	<div id="statusChangesDiv" title="Record Deleted"><center><br><p>Payment Added Successfully</p></center></div>
+                            		<script type="text/javascript">
+                            			// $("#statusChangesDiv").dialog();
+                                		$(document).ready(function() {
+                                    	$( "#statusChangesDiv" ).dialog({
+                                            modal: true,
+                                            buttons: {
+                                                        Ok: function() { $( this ).dialog( "close" );}
+                                                     }
+                                    	});
+									
+                                		});
+										setTimeout('document.location.href="invoice-summary.php?record_id=<?php echo $record_id; ?>";',1000);
+                            		</script>
+                                <?php
+								//======================================================== END SEND MESSAGE===============================
+								if($payment_type_val=="online")
+								{
+									?>
+                                    <div style="display:none;">
+									<form method="post" name="customerData" action="ccavRequestHandler1.php">
+									<table width="40%" height="100" border='1' align="center" style="display:none">
+									<caption><font size="4" color="blue"><b>Integration Kit</b></font></caption>
+									</table>
+										<table width="40%" height="100" border='1' align="center">
+											<tr>
+												<td>Parameter Name:</td><td>Parameter Value:</td>
+											</tr>
+											<tr>
+												<td colspan="2"> Compulsory information*</td>
+											</tr>
+											<tr>
+												<td>TID	:</td><td><input type="hidden" name="tid" id="tid" value="<? echo rand(0, 9999999999); ?>" readonly/></td>
+											</tr>
+											<tr>
+												<td>Merchant Id	:</td><td><input type="hidden" name="merchant_id" value="73035"/></td>
+											</tr>
+											<tr>
+												<td>Order Id	:</td><td><input type="hidden" name="order_id" value="<? echo $invoice_id; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Amount	:</td><td><input type="hidden" name="amount" value="<? echo $amount_paid; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Currency	:</td><td><input type="hidden" name="currency" value="INR"/></td>
+											</tr>
+											<tr>
+												<td>Redirect URL	:</td><td><input type="hidden" name="redirect_url" value="http://www.isasbeautyschool.com/faculty_login/ccavResponseHandler.php"/></td>
+											</tr>
+											<tr>
+												<td>Cancel URL	:</td><td><input type="hidden" name="cancel_url" value="http://www.isasbeautyschool.com/faculty_login/ccavResponseHandler.php"/></td>
+											</tr>
+											<tr>
+												<td>Language	:</td><td><input type="hidden" name="language" value="EN"/></td>
+											</tr>
+											<tr>
+												<td colspan="2">Billing information(optional):</td>
+											</tr>
+											<tr>
+												<td>Billing Name	:</td><td><input type="hidden" name="billing_name" value="<? echo $data_select1['name']; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Billing Address	:</td><td><input type="hidden" name="billing_address" value="<? echo $data_select1['address']; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Billing City	:</td><td><input type="hidden" name="billing_city" value="<? echo $branch_name1; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Billing State	:</td><td><input type="hidden" name="billing_state" value="MH"/></td>
+											</tr>
+											<tr>
+												<td>Billing Zip	:</td><td><input type="hidden" name="billing_zip" value="412207"/></td>
+											</tr>
+											<tr>
+												<td>Billing Country	:</td><td><input type="hidden" name="billing_country" value="India"/></td>
+											</tr>
+											<tr>
+												<td>Billing Tel	:</td><td><input type="hidden" name="billing_tel" value="<? echo $data_select1['contact']; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Billing Email	:</td><td><input type="hidden" name="billing_email" value="<? echo $data_select1['mail'] ; ?>"/></td>
+											</tr>
+											<tr>
+												<td colspan="2">Shipping information(optional)</td>
+											</tr>
+											<tr>
+												<td>Shipping Name	:</td><td><input type="hidden" name="delivery_name" value="<? echo $data_select1['name']; ?>"/></td>
+											</tr>
+											<tr>
+												<td>Shipping Address	:</td><td><input type="hidden" name="delivery_address" value="<? echo $data_select1['address']; ?>"/></td>
+											</tr>
+											<tr>
+												<td>shipping City	:</td><td><input type="hidden" name="delivery_city" value="<? echo $branch_name1; ?>"/></td>
+											</tr>
+											<tr>
+												<td>shipping State	:</td><td><input type="hidden" name="delivery_state" value="Andhra"/></td>
+											</tr>
+											<tr>
+												<td>shipping Zip	:</td><td><input type="hidden" name="delivery_zip" value="425001"/></td>
+											</tr>
+											<tr>
+												<td>shipping Country	:</td><td><input type="hidden" name="delivery_country" value="India"/></td>
+											</tr>
+											<tr>
+												<td>Shipping Tel	:</td><td><input type="hidden" name="delivery_tel" value="<? echo $data_select1['contact']; ?>"/></td>
+											</tr>
+											
+											<tr>
+												<td>Vault Info.	:</td><td><input type="hidden" name="customer_identifier" value=""/></td>
+											</tr>
+											<tr>
+												<td>Integration Type:</td><td><input type="hidden" name="integration_type" value="iframe_normal"/></td>
+											</tr>
+											<tr>
+												<td></td>
+                                                <script>
+												document.customerData.submit();
+												</script>>
+												
+											</tr>
+										</table>
+									  </form>
+                                      </div>
+                                      <?
+								}
+								else
+								{
+								?>
+                                	<div id="statusChangesDiv" title="Record Deleted"><center><br><p>Payment Added Successfully</p></center></div>
+                            		<script type="text/javascript">
+                            			// $("#statusChangesDiv").dialog();
+                                		$(document).ready(function() {
+                                    	$( "#statusChangesDiv" ).dialog({
+                                            modal: true,
+                                            buttons: {
+                                                        Ok: function() { $( this ).dialog( "close" );}
+                                                     }
+                                    	});
+									
+                                		});
+										setTimeout('document.location.href="invoice-summary.php?record_id=<?php echo $record_id; ?>";',1000);
+                            		</script>
+                                <?php
+								}
+								
+									/*$db->query_insert("installment",$data_record,$where_record);
+									echo '<div id="msgbox" style="width:40%;"><div>Payment added successfully</center>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="invoice-summary.php">Back</a>
+									</div>
+									</div>';*/
+									
+									
+									
+									
+									/*$insert_into_invoice= "INSERT INTO `invoice` (`course_id`, `admin_id`, `bank_name`, `cheque_detail`, `chaque_date`, `online_transc_details`, `amount`, `paid_type`, `added_date`, `enroll_id`,`installment_id`) VALUES ('".$data_record['course_id']."', '".$_SESSION['admin_id']."', '', '', '', '', '".$_POST['amount_paid']."', 'cheque', '".date('Y-m-d H:i:s')."','$enroll_id','$installment_id')";
+									$ptr_isert_invp = mysql_query($insert_into_invoice);
+									*/
+								}
+								else
+								{
+								 // $db->query_insert("pay_balace_bill_mapping", $data_college);
+								 //  echo '<div id="msgbox" style="width:40%;">Supplier added successfully</center></div>';
+								}
+								$success=1;
+								
+								
+                            	
+                        	}
+                                
+                         	?>       
+                                
+                                
+                                <form method="get" name="jqueryForm" id="jqueryForm">
+                                    
+                                </form>
+                         
+                      <?php
+                       if($_REQUEST['from_date'] && $_REQUEST['from_date']!=="0000-00-00" && $_REQUEST['from_date']!="From Date")
+                      {
+                  $pre_from_date=" and date_format(added_date,'%Y-%m-%d')>='".date('Y-m-d',strtotime($_REQUEST['from_date']))."'";
+                                    /*$sql_previos_total= "SELECT sum(amount) as credits FROM dd_user_payement where status='Active' and user_id='".$_SESSION['user_id']."' and debit_credit='Credit' and added_date<'".$_REQUEST['from_date']." 00:00:00'";
+                                    $row_previos_total=$db->fetch_array($db->query($sql_previos_total));
+
+                                    $sql_previos_total1= "SELECT sum(amount) as debits FROM dd_user_payement where status='Active' and user_id='".$_SESSION['user_id']."' and debit_credit='Debit' and added_date<'".$_REQUEST['from_date']." 00:00:00'";
+                                    $row_previos_total1=$db->fetch_array($db->query($sql_previos_total1));
+                                    $balance=$row_previos_total['credits']-$row_previos_total1['debits'];*/
+                                }
+                                else
+                                {
+                                    $balance=0;
+                                    $pre_from_date="";                            
+                                }
+                               
+									
+                                $sql_records= "SELECT * FROM invoice 
+								where enroll_id=".$record_id." ".$pre_transcation_id." ".$pre_from_date." ".$pre_to_date." ".$pre_status."  
+								order by invoice_id desc limit 0,1 ";
+								$all_records = mysql_query($sql_records);
+                                $no_of_records=mysql_num_rows($db->query($sql_records));
+                                if($no_of_records)
+                                {
+                           
+                                    $bgColorCounter=1;
+                                    if(!$_SESSION['showRecords'])
+                                        $_SESSION['showRecords']=10;
+									?>
+                                    <form method="post" name="frmTakeAction" id="add_payment_form" onSubmit="return validme();">
+                                    <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tr><td valign="middle" align="right">
+                                            <table width="100%" cellpadding="0" callspacing="0" border="0">
+                                                <tr>
+                                                    <?php
+                                                    if($no_of_records>10)
+                                                    {
+                                                        echo '<td width="3%" align="left">Show</td>
+                                                        <td width="12%" align="left"><select class="inputSelect" name="show_records" onchange="redirect(this.value)">';
+
+                                                        for($s=0;$s<count($show_records);$s++)
+                                                        {
+                                                            if($_SESSION['show_records']==$show_records[$s])
+                                                                echo '<option selected="selected" value="'.$show_records[$s].'">'.$show_records[$s].' Records</option>';
+                                                            else
+                                                                echo '<option value="'.$show_records[$s].'">'.$show_records[$s].' Records</option>';
+                                                        }
+                                                        echo'</td></select>';
+                                                    }
+                                                    ?>
+                                                   <!-- <td width="70%" align="right"><a href="javascript:void(0);" onClick="window.open('csvcompany_manage.php','win1','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=800,height=600,directories=no,location=no'); return false;" ><img src="images/csv.png" border="0"/></a>
+    
+    <img src='images/view.jpeg' title='View Invoice' border='0' 
+	onclick="window.open('invoice-generate-company.php')" style='cursor:pointer' > 
+    <img src='images/print1.jpeg'
+								onclick="window.open('invoice-generate-company.php?action=print','View Invoice')" style='cursor:pointer'title='Print Invoice' border='0'>
+                                            </td>-->
+                                                    <td height="2" align="right"></td>
+                                                </tr>
+                                            </table>
+                                        </td></tr>
+                                    <tr><td height="10"></td></tr>
+                                    
+                                    <tr>
+                                    	<td valign="top" colspan="2">
+                                        <input type="hidden" name="record_id" id="record_id" value=""  />
+                                       <table cellspacing="1"  cellpadding="5" style="width: 60%;" align="center">
+										<?php
+                                    while($val_record=mysql_fetch_array($all_records))
+                                    {
+										if($bgColorCounter%2==0)
+                                    		$bgcolor='class="grey_td"';
+                                		else
+                                    		$bgcolor=""; 
+										 $enroll_id=$val_record['enroll_id'];
+										 $paid_totas=0;
+                                        /*if($bgColorCounter%2==0)
+                                            $bgclass="tr-sub_white1";
+                                        else
+                                            $bgclass="tr-sub1";*/
+                                        include "include/paging_script.php";
+										if($_SESSION['type']=='S')
+										{
+										?>
+											  <tr>
+												<td>Select Branch</td>
+												<td>
+												<?php
+												$sel_cm_id="select branch_name from site_setting where cm_id=".$val_record['cm_id']." ";
+												$ptr_query=mysql_query($sel_cm_id);
+												$data_branch_nmae=mysql_fetch_array($ptr_query);
+												
+												$sel_branch = "SELECT * FROM branch where 1 order by branch_id asc ";	 
+												$query_branch = mysql_query($sel_branch);
+												$total_Branch = mysql_num_rows($query_branch);
+												echo '<table width="100%"><tr><td>';
+												echo ' <select id="branch_name" name="branch_name" onchange="show_bank(this.value)">';
+												while($row_branch = mysql_fetch_array($query_branch))
+												{
+													?>
+													<option value="<?php if ($_POST['branch_name']) echo $_POST['branch_name']; else echo $row_branch['branch_name'];?>"  <?php if($row_branch['branch_name']==$data_branch_nmae['branch_name']) echo 'selected="selected"' ?> /><?php echo $row_branch['branch_name']; ?> 
+													</option>
+													<?php
+												}
+													echo '</select>';
+													echo "</td></tr></table>";
+													?>
+											</td>
+										</tr>
+										<?php }
+										else { ?>
+                                       <input type="hidden" name="branch_name" id="branch_name" value="<?php echo $_SESSION['branch_name']; ?>"  /> 
+                                       <?php }
+                                        echo '<tr class="'.$bgclass.'">';
+                                        //echo '<td align="center">'.$sr_no.'</td>';
+										echo " <td><strong>Invoice No.</strong></td><td align='left'>".$val_record['enroll_id']."</td></tr>";
+										
+										$name ='';
+										$email_id = '';
+										$phone_no ='';
+					
+									  	$select_firstname = " select * from enrollment where enroll_id='".$val_record['enroll_id']."' ";
+									  	$ptr_query=mysql_query($select_firstname);
+										$data_select = mysql_fetch_array($ptr_query);
+										
+										
+										echo '<tr><td><strong>Student Name</strong></td><td align="left" style="padding-left:5px;"><b>'.$data_select['name'].'
+										<input type="hidden" name="cm_id_branch" value="'.$data_select['cm_id'].'"/></td></tr>';
+                                        echo '<tr><td><strong>Total</strong></td><td align="left">'.$data_select['course_fees'].'</td></tr>';
+                                        echo '<tr><td><strong>Discount</strong></td><td align="left">';
+                                        	echo $data_select['discount'];
+                                        echo '</td></tr>'; 
+									    $paid=$data_select['paid'];
+										/*$selectpaid="select sum(installment_amount) as amount_paid  from installment_history 
+										where enroll_id=".$val_record['enroll_id']." "; 
+										$ptr_selectpaid=mysql_query($selectpaid);
+										if(mysql_num_rows($ptr_selectpaid))
+										 {
+										while($val_selectedpaid=mysql_fetch_array($ptr_selectpaid))
+										{*/
+									    //$totsss=$data_select['course_fees']-$data_select['discount'];
+										//$bal_totas=$totsss-$data_select['paid']; 
+										/*}
+										}*/
+										
+										echo '<tr><td><strong>Down Payment</strong></td><td align="left">'.$data_select['down_payment'].'</td></tr>'; 
+										if($data_select['paid'] !='')
+										{
+									   		echo '<tr><td><strong>Paid</strong></td><td align="left">'.$data_select['paid'].'<input type="hidden" name="paid_amt" id="paid_amt" value="'.$data_select['paid'].'"</td></tr>'; 
+										}
+									   echo '<tr><td><strong>Balance Amount</strong></td><td align="left">'.$data_select['balance_amt'].'<input type="hidden" name="balance_amount" 
+                                				id="balance_amount" value="'.$data_select['balance_amt'].'" class="inputText"></td></tr>';
+										
+										echo '<tr><td><input type="hidden" name="bal_amt" id="bal_amt"/> </td></tr>'		
+									   ?> 
+										<tr><td width="37%"><strong>Deposite Amount</strong></td><td width="63%" align="left"><input type="text" name="amount_paid" id="amount_paid"
+                                                                                                                                                                             onkeyup="calculate_total(this.value,0)"	value="" > </td></tr>
+                                       <tr>
+                                          	<td width="20%" class="heading">Select Payment Mode</td>
+                                            <td><select name="payment_type" id="payment_type" onChange="show_payment(this.value)">
+                                            <option value="select">--Select--</option>
+                                            <?php
+                                            $sel_payment_mode="select payment_mode,payment_mode_id from payment_mode";
+                                            $ptr_payment_mode=mysql_query($sel_payment_mode);
+                                            while($data_payment=mysql_fetch_array($ptr_payment_mode))
+                                            {
+                                            	$selected='';
+												if($data_payment['payment_mode_id'] == $row_expense['payment_mode_id'])
+												{
+													$selected='selected="selected"';
+												}
+												echo '<option '.$selected.' value="'.$data_payment['payment_mode'].'-'.$data_payment['payment_mode_id'].'">'.$data_payment['payment_mode'].'</option>';
+                                            }
+                                            ?>
+                                            </select></td>
+                                           	</tr>
+                                           	<tr>
+                                           		<td colspan="3">
+                                             	<div id="bank_details" style="display:none">
+                                             	<table width="100%">
+                                             		<tr>
+                                             			<td width="56%" class="tr-header" align="">Customer Bank Name</td>
+                                             			<td width="20%" style="vertical-align:bottom">
+                                              			<input type="text" name="cust_bank_name" id="cust_bank_name" value="<?php if($_POST['cust_bank_name']) echo $_POST['cust_bank_name']; else echo $row_record['cust_bank_name']; ?>"/>
+                                             			</td>
+                                              			<td width="25%" class="tr-header" align=""> ISAS Bank Name : &nbsp; 
+                                              			<?php 
+											  			/*if($_SESSION['type'] !="S")
+											  			{
+											  			?>
+                                              				<select name="bank_name" id="bank_name" onChange="show_acc_no(this.value)">
+                                             				<option value="select">--Select--</option>
+                                             				<?php
+                                             				$sle_bank_name="select bank_id,bank_name from bank ".$_SESSION['where_cm_id'].""; 
+                                             				$ptr_bank_name=mysql_query($sle_bank_name);
+                                             				while($data_bank=mysql_fetch_array($ptr_bank_name))
+                                             				{
+                                                				$selected='';
+                                                				if($data_bank['bank_id'] == $row_invoice['bank_name'])
+                                                				{
+                                                    				$selected='selected="selected"';
+                                                				}
+                                                 				echo '<option '.$selected.' value="'.$data_bank['bank_id'].'">'.$data_bank['bank_name'].'</option>';
+                                             				}
+                                             				?>
+                                             				</select>
+                                            				<?php
+                                             			}*/
+											 			?>
+                                             			<div id="bank_id"></div>
+                                             			</td>
+                                             			<td width="25%" class="tr-header" align=""> ISAS Account No : &nbsp; 
+                                              			<input type="text" name="account_no" readonly="readonly" id="account_no" value="<?php if($_POST['account_no']) echo $_POST['account_no']; else echo $row_record['account_no']; ?>"/>
+                                            			</td>
+                                             		</tr>
+                                             	</table>
+                                             	</div>
+                                             	</td>
+                                             </tr>
+                                             <tr>
+                                             <td colspan="2">
+                                             <div id="chaque_details" style="display:none" <?php  //if($row_invoice=='cheque' || $_POST['payment_type'] =='cheque') echo ' style="display:block"'; else echo ' style="display:none"'; ?>>
+                                             	<table width="100%">
+                                                	<tr>
+                                                		<td width="37%">Customer Cheque No.</td>
+                                                        <td><input type="text" name="chaque_no" id="chaque_no"  class="validate[required] input_text"  value="<?php if($_POST['chaque_no']) echo $_POST['chaque_no']; else echo $row_invoice['chaque_no'];?>" onKeyPress="return isNumber(event)" maxlength="6"/></td>
+                                                	</tr>
+                                                 	<tr>
+                                                 		<td>Customer Cheque Date</td>
+                                                 		<td><input type="text" name="chaque_date" id="chaque_date"  class="datepicker" placeholder="cheque date " value="<?php if($_POST['save_changes']) echo $_POST['chaque_date']; else echo $chaque_date ;?>"/></td>
+                                                 	</tr>
+                                            	</table>
+                                            </div>
+                                            <div id="credit_details" style="display:none">
+                                            	<table width="100%">
+                                             		<tr>
+                                             			<td width="37%" class="tr-header" align="">Enter Credit Card No</td>
+                                             			<td><input type="text" name="credit_card_no" id="credit_card_no" maxlength="4" value="<?php if($_POST['credit_card_no']) echo $_POST['credit_card_no']; else echo $row_invoice['credit_card_no']; ?>" /></td>
+                                             		</tr>
+                                             	</table>
+                                            </div>
+                                            </td>
+                                       	</tr>                                                                                                                               
+										<tr><td colspan="2"><strong>Installments</strong></td></tr>		
+                                        <tr>
+                                        <td colspan="2">
+                                        <table width="95%" align="center">
+                                        	<tr>
+                                        	<td >
+                                        		<?php
+												$sel_inst= "select * from installment where enroll_id=".$record_id." ";
+												$ptr_query_inst=mysql_query($sel_inst);
+												$i=$data_select['no_of_installment'];
+												echo '<input type="hidden" name="no_of_installment" value="'.$i.'" id="no_of_installment" /><table width="60%" style="border:1px solid black">';
+												echo'<tr><td width="30%"><b>Installments</b></td><td width="20%"><b>Inst Amt</b></td><td width="25%"><b>Inst Date</b></td><td>Paid Status</td></tr>';
+											//	echo '<tr></tr>';
+												$j=1;
+                                                                                                $no_of_paid__installment=0;
+												while($data_inst=mysql_fetch_array($ptr_query_inst))
+												{
+                                                                                                    if($data_inst['status'] =='paid')
+                                                                                                        $no_of_paid__installment=$no_of_paid__installment+1;
+													 $col_paid ='<font color="#006600">';
+													if($data_inst[status] =='not paid')
+													$col_paid ='<font color="#FF3333">';
+													echo '<input type="hidden" name="course_id" value="'.$data_inst['course_id'].'" id="course_id" />';
+													
+													echo'<tr><td width="15%"><b>Installment '.$j.'</b></td><td width="15%">'
+                                                                                                                . '<input type="hidden" name="inst_original_'.$j.'" id="inst_original_'.$j.'" value="'.$data_inst['installment_amount'].'">'
+                                                                                                                . '<input type="hidden" name="inst_'.$j.'" id="inst_'.$j.'" value="'.$data_inst['installment_amount'].'"><span id=int_id_'.$j.'>'.$data_inst['installment_amount'].'</span></td><td width="15%"><input type="hidden" name="inst_date'.$j.'" id="inst_date'.$j.'" value="'.$data_inst['installment_date'].'">'.$data_inst['installment_date'].'</td>
+													<td>'.$col_paid.$data_inst['status'].'</font></td></tr>';
+													$j++;
+													$i--;
+												}
+												echo '</table>';
+												echo '<input type="hidden" name="no_of_paid_installment" value="'.$no_of_paid__installment.'" id="no_of_paid_installment" />';
+												?>
+                                                
+                                        	</td>
+                                        </tr>
+                                        </table>
+                                        </td>
+                                        </tr>
+                                        
+								 		<tr><td width="37%"><strong>Remaining </strong></td><td align="left"  width="63%"> <div id="avail_balance_show"><?php echo $data_select['balance_amt']; ?></div><input type="hidden" name="avail_balance" id="avail_balance" /> </td></tr>
+                               			
+                                        <tr>
+                                            <td colspan="2" align="center"> <input type="submit" onClick="return submitform();" name="save_changes" value="Add Payment" class="add_submit_button"/></td>
+                                        </tr>
+                                        <?php
+                                       $bgColorCounter++;
+                                    }
+                                  
+                                    ?>
+                                    
+                                        </table>
+                                    </td></tr>
+                                    <tr><td height="10"></td></tr>
+                                    <tr><td valign="middle" align="right">
+                                            <table width="100%" cellpadding="0" callspacing="0" border="0">
+                                                <tr>
+                                                    <?php
+                                                    if($no_of_records>10)
+                                                    {
+                                                        echo '<td width="3%" align="left">Show</td>
+                                                        <td width="12%" align="left"><select class="inputSelect" name="show_records" onchange="redirect(this.value)">';
+
+                                                        for($s=0;$s<count($show_records);$s++)
+                                                        {
+                                                            if($_SESSION['show_records']==$show_records[$s])
+                                                                echo '<option selected="selected" value="'.$show_records[$s].'">'.$show_records[$s].' Records</option>';
+                                                            else
+                                                                echo '<option value="'.$show_records[$s].'">'.$show_records[$s].' Records</option>';
+                                                        }
+                                                        echo'</td></select>';
+                                                    }
+                                                    ?>
+                                                    <td align="right"></td>
+                                                </tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                    </form><?php
+                                }
+                                else if($_GET['search'])
+                                    echo'<center><br><div id="alert" style="width:80%">Records not found related to your search criteria, please try again to get more results</div><br></center>';
+                                else
+                                    echo'<center><br><div id="alert" style="width:30%">No Payment history here</div><br></center>';
+                            ?>
+                            
+                            </td>
+                            <td class="mid_right"></td>
+                          </tr>
+                           <tr>
+    							<td class="bottom_left"></td>
+    							<td class="bottom_mid"></td>
+    							<td class="bottom_right"></td>
+  							</tr>
+                         </table>
+                     </div>
+<!--right end-->
+</div>
+<script>
+/*vals= document.getElementById("payment_type").value;
+show_payment(vals);*/
+<?php
+if($record_id || $_SESSION['type']=="S")
+{
+	?>
+	vals= document.getElementById("payment_type").value;
+	show_payment(vals);
+	<?php
+}
+
+?>
+</script>
+<!--info end-->
+<div class="clearit"></div> 
+                    <noscript>
+                            Warning! JavaScript must be enabled for proper operation of the Administrator backend.				</noscript>
+                 <div id="footer"><? require("include/footer.php");?></div>
+<!--footer end-->
+</body>
+</html>
+<?php $db->close();?>

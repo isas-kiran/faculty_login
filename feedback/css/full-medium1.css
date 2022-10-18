@@ -1,0 +1,658 @@
+@media(min-width:1200px){
+    .full-web-view .medium-survey-element .ces-option {
+		display: inline-block;
+		float: none !important;
+		width: 9.4% !important;
+		vertical-align:top;
+		/*line-height: 8px !important;*/
+	}
+	
+	
+	/*-- new changes --*/
+	.full-web-view .mcq-button{
+		padding: 12px;
+   		width: 94%;
+	}
+	.num-ratings li{
+		width: 8%;
+		float:none !important;
+	}
+	
+	
+    .full-web-view .medium-survey-element .ces-button{
+		width: 15% !important;
+	}
+	.full-web-view .medium-survey-element .css-button{
+		width: 13%;
+	}
+	.full-web-view .medium-survey-element .double_column .ces-option {
+		width: 18% !important;
+	}
+	.full-web-view .medium-survey-element .double_column .ces-option-label {
+		font-size: 15px !important;
+	}
+	
+	/*----- nps medium ---------*/
+	
+	.full-web-view .medium-survey-element .num-ratings span{
+		width:52px;
+		height:52px;
+		line-height:53px;
+	}
+	
+	/*----- move medium ---------*/
+	
+	/*.full-web-view .medium-survey-element .option-list{
+		font-size: 20px !important;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"]{
+		width:80%;
+		padding:8px;
+	}
+	.full-web-view .medium-survey-element .phone-input-second {
+		float: none;
+		width: 70% !important;
+	}
+	.full-web-view .medium-survey-element .phone-input-first {
+		float: none;
+		width: 10% !important;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .date-picker {
+		background-size: 32px auto;
+	}*/
+	.full-web-view  .medium-survey-element .form-radio > input + .un-check ,
+.full-web-view  .medium-survey-element .form-checkbox > input + .un-check{
+		/*background-size: 20px auto;
+		display: inline-block;*/
+		height: 20px;
+		width: 20px;
+	}
+	
+/*	.full-web-view .medium-survey-element .checkbox-option-withbox ,
+	 .full-web-view .medium-survey-element .rdo-option-withbox{
+		float: none;
+		width: 18% !important;
+	}*/
+	/*.full-web-view .medium-survey-element .double_column .nps-option span {
+		height: 38px;
+		line-height: 37px;
+		width: 38px;
+	}*/
+
+
+	/*---- new css (augst) --*/
+	
+	.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 16px !important;
+	}
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.full-web-view .medium-survey-element .ces-option-label,
+	   .full-web-view .medium-survey-element .direction-help-placeholder-text{
+		font-size: 14px !important;
+	}
+     
+	.full-web-view .medium-survey-element ul li ,
+	.full-web-view .medium-survey-element .form-radio span ,
+	.full-web-view .medium-survey-element .form-checkbox span ,
+	span.rdo-withboximage-option-label, span.checkbox-withboximage-option-label,
+	.full-web-view .medium-survey-element .option-list ,
+	.full-web-view .medium-survey-element .mcq-button ,
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"] ,
+	.full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button  {
+		font-size:16px !important;
+	}
+	
+}
+
+
+@media(min-width:768px){
+	
+	/*.full-web-view .table-radio-rating td:first-child, .full-web-view .table-simple-symbol td:first-child {
+		padding-bottom: 11px !important;
+		line-height: 19px;
+	}
+	.full-web-view .table-simple-symbol.no-text-top td:first-child {
+		padding-bottom: 11px !important;
+		line-height: 19px;
+	}*/
+}
+
+@media(max-width:1199px) and (min-width:992px){
+    .full-web-view .medium-survey-element .ces-option {
+		display: inline-block;
+		float: none !important;
+		width: 14% !important; /* change */
+		line-height: 8px;
+	}
+	/*-- new changes --*/
+	.full-web-view .mcq-button{
+		padding: 12px;
+   		width: 94%;
+	}
+	.num-ratings li{
+		width: 7%;
+		float:none !important;
+	}
+	
+	/*.full-web-view .medium-survey-element img{
+		width:52px;
+	}
+	.full-web-view .medium-survey-element .star-ratings {
+		margin: 0 auto !important;
+		width: 72%;
+	}	*/
+	
+	.full-web-view .medium-survey-element .ces-option-label {
+		font-size: 17px !important;/* change */
+	}
+    .full-web-view .medium-survey-element .ces-button{
+		width: 15% !important;
+	}
+	.full-web-view .medium-survey-element .css-button{
+		width: 13%;
+	}
+	.full-web-view .medium-survey-element .double_column .ces-option-label {
+		font-size: 13px !important;
+	}
+	.full-web-view .medium-survey-element .double_column .ces-option {
+		line-height: 15px;
+		vertical-align: top;
+		width: 16% !important;
+	}
+	
+	/*.full-web-view .medium-survey-element .form-radio > input + .un-check ,
+	.full-web-view .medium-survey-element .form-checkbox > input + .un-check{
+		background-size: 20px auto;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+	}*/
+	
+	/*----- nps medium ---------*/
+	
+	/*.full-web-view .medium-survey-element .num-ratings span{
+		width:52px;
+		height:52px;
+		line-height:53px;
+	}*/
+	
+	/*----- move large ---------*/
+	
+	.full-web-view .medium-survey-element .option-list{
+		font-size: 16px !important;
+	}
+	
+	
+	/*.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"]{
+		width:80%;
+		padding:8px;
+	}
+	.full-web-view .medium-survey-element .phone-input-second {
+		float: none;
+		width: 70% !important;
+	}
+	.full-web-view .medium-survey-element .phone-input-first {
+		float: none;
+		width: 10% !important;
+	}*/
+	
+	
+	/*.full-web-view .medium-survey-element .checkbox-option-withbox ,
+	.full-web-view .medium-survey-element .rdo-option-withbox{
+		float: none;
+		width: 18% !important;
+	}*/
+	
+	
+	/*.full-web-view .medium-survey-element .checkbox-option-withbox img, 
+	.full-web-view .medium-survey-element .rdo-option-withbox img ,
+	.full-web-view .medium-survey-element .rdo-withimage-bottom, 
+	.full-web-view .medium-survey-element .checkbox-withimage-bottom{
+		margin: 0 !important;
+		width: 95px !important;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .double_column .nps-option span {
+		height: 38px;
+		line-height: 37px;
+		width: 38px;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .double_column .checkbox-option-withbox, .full-web-view .medium-survey-element .double_column .rdo-option-withbox {
+		float: none;
+		width: 21% !important;
+	}*/
+
+	/*---- new css (augst) --*/
+	
+	.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 16px !important;
+	}
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.full-web-view .medium-survey-element .ces-option-label ,
+	  .full-web-view .medium-survey-element .direction-help-placeholder-text{
+		font-size: 14px !important;
+	}
+      
+	.full-web-view .medium-survey-element ul li ,
+	.full-web-view .medium-survey-element .form-radio span ,
+	.full-web-view .medium-survey-element .form-checkbox span ,
+	span.rdo-withboximage-option-label, span.checkbox-withboximage-option-label,
+	.full-web-view .medium-survey-element .option-list ,
+	.full-web-view .medium-survey-element .mcq-button ,
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"] ,
+	.full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button  {
+		font-size:16px !important;
+	}
+}
+@media(max-width:991px) and (min-width:768px){
+    .full-web-view .medium-survey-element .ces-option {
+		display: inline-block;
+		float: none !important;
+		width: 16% !important; /* change */
+		line-height: 8px;
+	}
+	/*-- new changes --*/
+	.full-web-view .mcq-button{
+		padding: 12px;
+   		width: 94%;
+	}
+	.num-ratings li{
+		width: 8%;
+		float:none !important;
+	}
+	
+	/*.full-web-view .medium-survey-element img{
+		width:52px;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .star-ratings {
+		margin: 0 auto !important;
+		width: 85%;
+	}*/
+	
+	.full-web-view .medium-survey-element .ces-option-label {
+		font-size: 17px !important;/* change */
+	}
+    .full-web-view .medium-survey-element .ces-button{
+		width: 15% !important;
+	}
+	.full-web-view .medium-survey-element .css-button{
+		width: 12%;
+	}
+	.full-web-view .medium-survey-element .double_column .ces-option {
+		line-height: 15px;
+		vertical-align: top;
+		width: 16% !important;
+	}
+	.full-web-view .medium-survey-element .ces-option-label {
+		font-size: 16px !important;
+	}
+	
+	/*.full-web-view .medium-survey-element .checkbox-option-withbox ,
+	 .full-web-view .medium-survey-element .rdo-option-withbox{
+		float: none;
+		width: 18% !important;
+	}*/
+	
+	
+	/*.full-web-view .medium-survey-element .checkbox-option-withbox img, 
+	.full-web-view .medium-survey-element .rdo-option-withbox img ,
+	.full-web-view .medium-survey-element .rdo-withimage-bottom, 
+	.full-web-view .medium-survey-element .checkbox-withimage-bottom{
+		margin: 0 !important;
+		width: 95px !important;
+	}*/
+	
+	
+	/*----- nps medium ---------*/
+	
+	/*.full-web-view .medium-survey-element .num-ratings span{
+		width:52px;
+		height:52px;
+		line-height:53px;
+	}*/
+	/*----- move large ---------*/
+	
+	.full-web-view .medium-survey-element .option-list{
+		font-size: 15px !important;
+	}
+	
+	
+	/*.full-web-view .medium-survey-element .form-radio > input + .un-check ,
+	.full-web-view .medium-survey-element .form-checkbox > input + .un-check{
+		background-size: 20px auto;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"]{
+		width:80%;
+		padding:8px;
+	}
+	.full-web-view .medium-survey-element .phone-input-second {
+		float: none;
+		width: 70% !important;
+	}
+	.full-web-view .medium-survey-element .phone-input-first {
+		float: none;
+		width: 10% !important;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .double_column .checkbox-option-withbox, .full-web-view .medium-survey-element .double_column .rdo-option-withbox {
+		float: none;
+		width: 27% !important;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .double_column .nps-option span {
+		height: 28px;
+		line-height: 27px;
+		width: 28px;
+	}*/
+	/*---- new css (augst) --*/
+	
+	.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 16px !important;
+	}
+	.full-web-view .medium-survey-element .direction-help-placeholder-text ,
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.full-web-view .medium-survey-element .ces-option-label{
+		font-size: 14px !important;
+	}
+        
+	.full-web-view .medium-survey-element ul li ,
+	.full-web-view .medium-survey-element .form-radio span ,
+	.full-web-view .medium-survey-element .form-checkbox span ,
+	span.rdo-withboximage-option-label, span.checkbox-withboximage-option-label,
+	.full-web-view .medium-survey-element .option-list ,
+	.full-web-view .medium-survey-element .mcq-button ,
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"] ,
+	.full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button  {
+		font-size:16px !important;
+	}
+	/*.nps-option .nps-help-text {
+		font-size: 14px !important;
+	}*/
+}
+@media(max-width:767px){
+    .full-web-view .medium-survey-element .ces-option {
+		display: inline-block;
+		float: none !important;
+		width: 19% !important; /* change */
+		line-height: 8px;
+		vertical-align:top;
+	}
+	/*-- new changes --*/
+	.full-web-view .mcq-button{
+		padding: 12px;
+   		width: 100%;
+	}
+	/*.num-ratings li{
+		width: 7%;
+		float:none !important;
+	}*/
+	
+	/*.full-web-view .medium-survey-element img{
+		width:42px;
+	}*/
+	/*.full-web-view .medium-survey-element .star-ratings {
+		margin: 0 auto !important;
+		width: 100%;
+	}*/
+	
+	
+	.full-web-view .medium-survey-element .ces-option-label {
+		font-size: 13px !important;/* change */
+	}
+    .full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button{
+		width: 100% !important;
+		margin:0 0 10px 0;
+	}
+	.full-web-view .medium-survey-element .double_column {
+		width:100% !important;
+	}
+	
+	
+	
+	/*----- move large ---------*/
+	
+	/*.full-web-view .medium-survey-element .option-list{
+		font-size: 14px !important;
+	}*/
+	
+	
+	
+	
+	
+	/*----- nps medium ---------*/
+	
+	/*.full-web-view .medium-survey-element .num-ratings span {
+		font-size: 13px;
+		height: 36px;
+		line-height: 37px;
+		width: 36px;
+	}*/
+	/*.full-web-view .medium-survey-element .nps-last-help-text ,
+	.full-web-view .medium-survey-element .nps-first-help-text{
+		font-size: 13px;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .form-radio > input + .un-check ,
+	.full-web-view .medium-survey-element .form-checkbox > input + .un-check{
+		background-size: 20px auto;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+	}*/
+	
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"]{
+		width:100%;
+		padding:8px;
+	}
+	.full-web-view .medium-survey-element .phone-input-second {
+		float: none;
+		width: 89% !important;
+	}
+	.full-web-view .medium-survey-element .phone-input-first {
+		float: none;
+		width: 10% !important;
+		padding-left: 0 !important;
+    	padding-right: 0 !important;
+	}
+	
+	
+	
+	
+	
+	
+	
+	.full-web-view .medium-survey-element .date-picker {
+		background-size: 29px auto;
+	}
+	/*---- new css (augst) --*/
+	
+	.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 16px !important;
+	}
+	 .full-web-view .medium-survey-element .direction-help-placeholder-text ,
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.full-web-view .medium-survey-element .ces-option-label{
+		font-size: 14px !important;
+	}
+       
+	.full-web-view .medium-survey-element ul li ,
+	.full-web-view .medium-survey-element .form-radio span ,
+	.full-web-view .medium-survey-element .form-checkbox span ,
+	span.rdo-withboximage-option-label, span.checkbox-withboximage-option-label,
+	.full-web-view .medium-survey-element .option-list ,
+	.full-web-view .medium-survey-element .mcq-button ,
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"] ,
+	.full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button  {
+		font-size:16px !important;
+	}
+	/*.nps-option .nps-help-text {
+		font-size: 14px !important;
+	}*/
+}
+
+@media(max-width:767px) and (min-width:480px){
+	
+}
+@media(max-width:479px) {
+	/*.full-web-view .medium-survey-element .checkbox-option-withbox ,
+	.full-web-view .medium-survey-element .rdo-option-withbox{
+		width: 49% !important;
+	}*/
+}
+@media(max-width:479px){
+    .full-web-view .medium-survey-element .ces-option {
+		display: inline-block;
+		float: none !important;
+		width: 19% !important; /* change */
+		line-height: 13px;
+    	vertical-align: top;
+	}
+	/*-- new changes --*/
+	.full-web-view .mcq-button{
+		padding: 12px;
+	}
+	/*.num-ratings li{
+		width: 8%;
+		float:none !important;
+	}*/
+	
+	
+	/*.full-web-view .medium-survey-element .star-ratings {
+		margin: 0 auto !important;
+		width: 100%;
+	}*/
+	
+	/*.full-web-view .medium-survey-element .ces-option-label {
+		font-size: 11px !important;
+	}*/
+    .full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button {
+		display: block;
+		margin: 0 0 9px;
+		width: 100% !important;
+	}
+	.full-web-view .medium-survey-element .double_column {
+		width:100% !important;
+	}
+	
+	
+	/*----- nps medium ---------*/
+	
+	/*.full-web-view .medium-survey-element .num-ratings span {
+		font-size: 13px;
+		height: 24px;
+		line-height: 25px;
+		width: 24px;
+	}
+	.full-web-view .medium-survey-element .nps-last-help-text ,
+	.full-web-view .medium-survey-element .nps-first-help-text{
+		font-size: 13px;
+	}*/
+	
+	/*----- move large ---------*/
+	
+	.full-web-view .medium-survey-element .option-list{
+		font-size: 16px !important;
+		/*padding: 15px 5px;*/
+	}
+	
+	
+	/*.full-web-view .medium-survey-element span ,*/
+	
+	/*.full-web-view .medium-survey-element .form-radio > input + .un-check ,
+	.full-web-view .medium-survey-element .form-checkbox > input + .un-check {
+		background-size: 18px auto;
+		display: inline-block;
+		height: 18px;
+		width: 18px;
+	}*/
+
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"]{
+		width:100%;
+		padding: 8px;
+	}
+
+	.full-web-view .medium-survey-element .date-picker{
+		background-size: 25px auto;
+	}
+	
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"]{
+		width:100%;
+		font-size:13px !important;
+	}
+	.full-web-view .medium-survey-element .phone-input-second {
+		float: none;
+		width: 82% !important;
+	}
+	.full-web-view .medium-survey-element .phone-input-first {
+		float: none;
+		width: 16% !important;
+		padding-left:0px !important;
+		padding-right:0px !important;
+	}
+	
+	.full-web-view .medium-survey-element .form-radio > input:checked + .un-check ,
+	.full-web-view .medium-survey-element .form-radio > input + .un-check ,
+	.full-web-view .medium-survey-element .form-checkbox > input + .un-check{
+		 background-size: 18px auto;
+		display: inline-block;
+		height: 18px;
+		width: 18px;
+	}
+	/*---- new css (augst) --*/
+	
+	.table-radio-rating td:first-child ,
+	.table-simple-symbol td:first-child{
+		font-size: 16px !important;
+	}
+	 .full-web-view .medium-survey-element .direction-help-placeholder-text ,
+	.table-radio-rating th ,
+	.table-simple-symbol th ,
+	.nps-help-text ,
+	.full-web-view .medium-survey-element .ces-option-label{
+		font-size: 14px !important;
+	}
+       
+	.full-web-view .medium-survey-element ul li ,
+	.full-web-view .medium-survey-element .form-radio span ,
+	.full-web-view .medium-survey-element .form-checkbox span ,
+	span.rdo-withboximage-option-label, span.checkbox-withboximage-option-label,
+	.full-web-view .medium-survey-element .option-list ,
+	.full-web-view .medium-survey-element .mcq-button ,
+	.full-web-view .medium-survey-element .form input[type="text"], .full-web-view .medium-survey-element .form textarea[type="text"], .full-web-view .medium-survey-element .form select[type="text"] ,
+	.full-web-view .medium-survey-element .ces-button ,
+	.full-web-view .medium-survey-element .css-button  {
+		font-size:16px !important;
+	}
+}
+
+/*.full-web-view .choice-option-label.radio-button-label-text {
+     //vertical-align: top; 
+    position: relative;
+    top: -5px;
+}*/

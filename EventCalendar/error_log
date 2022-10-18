@@ -1,0 +1,273 @@
+[07-Oct-2017 10:17:39 UTC] PHP Fatal error:  Cannot access empty property in /home/isasadmin007/public_html/isastest/faculty_login/EventCalendar/backend_events.php on line 27
+[10-Jun-2018 08:51:03 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[10-Jun-2018 08:51:03 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[10-Jun-2018 08:51:03 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[14-Jun-2018 06:10:43 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[14-Jun-2018 06:10:43 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[14-Jun-2018 06:10:43 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[14-Jun-2018 06:21:12 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[14-Jun-2018 06:21:12 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[14-Jun-2018 06:21:12 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[14-Jun-2018 14:23:44 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[14-Jun-2018 14:23:44 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[14-Jun-2018 14:23:44 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[14-Jun-2018 14:26:23 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[14-Jun-2018 14:26:23 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[14-Jun-2018 14:26:23 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[15-Jun-2018 07:13:44 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[15-Jun-2018 07:13:44 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[15-Jun-2018 07:13:44 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[15-Jun-2018 07:26:56 UTC] PHP Notice:  Undefined index: newStart in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 4
+[15-Jun-2018 07:26:56 UTC] PHP Notice:  Undefined index: newEnd in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 5
+[15-Jun-2018 07:26:56 UTC] PHP Notice:  Undefined index: newResource in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_delete.php on line 6
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:25:29 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:17 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:44:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[15-Jun-2018 09:51:28 UTC] PHP Notice:  Undefined property: Event::$bubbleHtml in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 47
+[24-Oct-2018 08:22:07 UTC] PHP Catchable fatal error:  Object of class PDOStatement could not be converted to string in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 4
+[15-Dec-2018 13:30:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by customer_service_map_id desc' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:9
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(9): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 9
+[17-Jan-2019 10:15:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:15:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:17:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:18:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:25:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:33:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:33:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:34:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:58:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 10:58:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:02:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:02:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:03:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:07:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:17:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:25:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:34:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:35:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:46:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:50:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:51:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 11:51:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 12:00:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 12:00:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 12:02:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 12:07:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 13:09:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 13:49:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[17-Jan-2019 13:50:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[18-Jan-2019 05:04:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php:33
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(33): PDOStatement->execute()
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php on line 33
+[15-Feb-2019 13:22:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1226] User 'isasadmin' has exceeded the 'max_user_connections' resource (current value: 30)' in /home/isasadmin007/public_html/faculty_login/EventCalendar/_db.php:21
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/EventCalendar/_db.php(21): PDO->__construct('mysql:host=loca...', 'isasadmin', 'isasadmin007')
+#1 /home/isasadmin007/public_html/faculty_login/EventCalendar/backend_events.php(2): require_once('/home/isasadmin...')
+#2 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/EventCalendar/_db.php on line 21

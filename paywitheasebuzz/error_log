@@ -1,0 +1,15 @@
+[29-Dec-2017 06:46:25 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Status is empty' in /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/easepay-lib.php:51
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/response.php(4): response(Array, '6JC3APTHXD')
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/easepay-lib.php on line 51
+[29-Dec-2017 10:48:52 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Status is empty' in /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/easepay-lib.php:51
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/response.php(4): response(Array, '6JC3APTHXD')
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/easepay-lib.php on line 51
+[30-Dec-2017 05:24:02 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Status is empty' in /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/easepay-lib.php:51
+Stack trace:
+#0 /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/response.php(4): response(Array, 'UO41S1OKXF')
+#1 {main}
+  thrown in /home/isasadmin007/public_html/faculty_login/paywitheasebuzz/easepay-lib.php on line 51
